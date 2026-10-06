@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="w-full border-b border-slate-200 bg-white">
             <div className="mx-auto flex w-full max-w-7xl items-center gap-6 px-4 py-3 sm:px-6">
-                <a className="shrink-0 text-lg font-semibold text-slate-900" href="#home">
+                <a className="shrink-0 text-lg font-semibold text-slate-900" href={links[0].href}>
                     {siteName}
                 </a>
                 <nav className="ml-auto flex min-w-0 items-center justify-end gap-2 overflow-x-auto py-1" aria-label="Main navigation">
