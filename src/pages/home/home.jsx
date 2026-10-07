@@ -11,10 +11,10 @@ export default function Home() {
         <main>
             <PageIndex />
             <AboutMe />
-            <div className="home-overview" id="skills-stats">
+            <div className="home-overview">
                 <Skills />
             </div>
-            <div className="home-overview" id="skills-stats">
+            <div className="home-overview">
                 <Stats />
             </div>
             <Projects />
