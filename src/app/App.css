@@ -1,0 +1,31 @@
+.app-shell__content {
+	min-width: 0;
+}
+
+.app-shell__content--with-index {
+	margin-right: 12rem;
+}
+
+.app-shell__content [id] {
+	scroll-margin-top: 2rem;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 760px) {
+	.app-shell__content--with-index {
+		margin-right: 0;
+	}
+
+	.app-shell__content [id] {
+		scroll-margin-top: 5rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

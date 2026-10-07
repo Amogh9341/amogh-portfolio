@@ -1,16 +1,20 @@
 import AboutMe from "./aboutMe/aboutMe.jsx";
+import PageIndex from "./index/index.jsx";
 import Skills from "./skills/skills.jsx";
 import Stats from "./stats/stats.jsx";
 import Projects from "./projects/projects.jsx";
 import ContactMe from "./contactMe/contactMe.jsx";
 import "./home.css";
 
-export default function Home() {
+export default function Home({ isIndexOpen, onIndexClose }) {
     return (
         <main>
+            <PageIndex isOpen={isIndexOpen} onClose={onIndexClose} />
             <AboutMe />
-            <div className="home-overview">
+            <div className="home-overview" id="skills-stats">
                 <Skills />
+            </div>
+            <div className="home-overview" id="skills-stats">
                 <Stats />
             </div>
             <Projects />

@@ -1,0 +1,130 @@
+.page-index {
+	position: fixed;
+	top: 4rem;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	width: 12rem;
+	align-items: center;
+	border-left: 1px solid #d1d1d1;
+	background: #fff;
+	color: #111;
+}
+
+.page-index__nav {
+	display: flex;
+	flex: 1;
+	align-items: center;
+}
+
+.page-index__list {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 1.5rem 1rem;
+	list-style: none;
+}
+
+.page-index__link {
+	display: block;
+	padding: 0.8rem 0.5rem;
+	color: #999;
+	font-size: 0.95rem;
+	text-decoration: none;
+	transition: color 150ms ease;
+}
+
+.page-index__link:hover,
+.page-index__link:focus-visible,
+.page-index__link--active {
+	color: #111;
+}
+
+.page-index__link:focus-visible {
+	outline: 2px solid #111;
+	outline-offset: 3px;
+}
+
+.page-index__scrollbar {
+	width: 1rem;
+	height: min(60vh, 36rem);
+	flex: 0 0 1rem;
+	margin: 0 0.9rem 0 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	appearance: none;
+	cursor: ns-resize;
+	writing-mode: vertical-lr;
+}
+
+.page-index__scrollbar::-webkit-slider-runnable-track {
+	width: 2px;
+	border-radius: 0;
+	background: #d1d1d1;
+}
+
+.page-index__scrollbar::-webkit-slider-thumb {
+	width: 0.65rem;
+	height: 0.65rem;
+	border: 1px solid #555;
+	border-radius: 50%;
+	background: #fff;
+	appearance: none;
+}
+
+.page-index__scrollbar::-moz-range-track {
+	width: 2px;
+	border: 0;
+	border-radius: 0;
+	background: #d1d1d1;
+}
+
+.page-index__scrollbar::-moz-range-thumb {
+	width: 0.55rem;
+	height: 0.55rem;
+	border: 1px solid #555;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.page-index__scrollbar:focus-visible {
+	outline: 2px solid #111;
+	outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+	.page-index {
+		position: fixed;
+		top: 3.75rem;
+		bottom: 0;
+		right: 0;
+		display: none;
+		width: min(18rem, 85vw);
+		max-height: calc(100svh - 3.75rem);
+		overflow-y: auto;
+		border: 1px solid #d1d1d1;
+		box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.12);
+	}
+
+	.page-index--open {
+		display: flex;
+	}
+
+	.page-index__list {
+		padding: 1rem;
+	}
+
+	.page-index__scrollbar {
+		height: 50vh;
+		margin-right: 0.75rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-index__link {
+		transition: none;
+	}
+}

@@ -6,7 +6,7 @@ export default function AboutMe() {
   const lastName = rest.join(" ");
 
   return (
-    <section className="about-hero">
+    <section className="about-hero" id="about-me">
       <div className="about-hero__content">
         <p className="about-hero__eyebrow">{title}</p>
 

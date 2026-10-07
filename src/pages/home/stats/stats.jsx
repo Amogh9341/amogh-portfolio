@@ -3,7 +3,7 @@ import "./stats.css";
 
 export default function Stats() {
   return (
-    <section className="stats-section" aria-labelledby="stats-heading">
+    <section className="stats-section" id="stats" aria-labelledby="stats-heading">
       <h2 className="stats-section__title" id="stats-heading">Stats</h2>
       <dl className="stats-section__list">
         {stats.map(({ name, description }) => (

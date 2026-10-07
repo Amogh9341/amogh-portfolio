@@ -3,7 +3,7 @@ import "./skills.css";
 
 export default function Skills() {
   return (
-    <section className="skills-section" aria-labelledby="skills-heading">
+    <section className="skills-section" id="skills" aria-labelledby="skills-heading">
       <h2 className="skills-section__title" id="skills-heading">Skills</h2>
       <ul className="skills-section__list">
         {skills.map(({ name, skillLevel }) => (
