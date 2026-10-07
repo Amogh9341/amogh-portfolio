@@ -1,0 +1,274 @@
+.contact-section {
+	border-top: 1px solid #d4d8d2;
+	padding: 5rem clamp(1.5rem, 8vw, 7rem) 6rem;
+	background: #eef1ec;
+	color: #17211c;
+}
+
+.contact-section__inner {
+	width: min(100%, 90rem);
+	margin-inline: auto;
+}
+
+.contact-section__heading {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.contact-section__eyebrow,
+.contact-location__label,
+.contact-location__map-label {
+	font-family: "DM Mono", "Courier New", monospace;
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.contact-section__eyebrow {
+	margin: 0 0 0.8rem;
+	color: #55705f;
+}
+
+.contact-section__heading h2 {
+	margin: 0;
+	font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+	font-size: clamp(2.5rem, 5vw, 5rem);
+	font-weight: 700;
+	line-height: 0.98;
+}
+
+.contact-section__content {
+	display: grid;
+	grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.1fr);
+	align-items: stretch;
+	gap: clamp(2rem, 6vw, 6rem);
+}
+
+.contact-location {
+	display: flex;
+	min-height: 26rem;
+	flex-direction: column;
+	padding: 0.75rem;
+	background: #173b30;
+	color: #fff;
+}
+
+.contact-location__map {
+	position: relative;
+	display: flex;
+	min-height: 17rem;
+	flex: 1;
+	align-items: flex-end;
+	overflow: hidden;
+	padding: 1rem;
+	background-color: #d8e0d6;
+	background-image:
+		linear-gradient(35deg, transparent 46%, #b5c5b7 47%, #b5c5b7 49%, transparent 50%),
+		linear-gradient(145deg, transparent 58%, #bdcbbb 59%, #bdcbbb 61%, transparent 62%),
+		repeating-linear-gradient(0deg, transparent 0 35px, rgb(23 59 48 / 8%) 36px 37px),
+		repeating-linear-gradient(90deg, transparent 0 35px, rgb(23 59 48 / 8%) 36px 37px);
+}
+
+.contact-location__marker {
+	position: absolute;
+	top: 47%;
+	left: 53%;
+	width: 1.1rem;
+	aspect-ratio: 1;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	background: #ed6547;
+	box-shadow: 0 0 0 8px rgb(237 101 71 / 22%);
+}
+
+.contact-location__map-label {
+	color: #173b30;
+	font-size: 0.65rem;
+}
+
+.contact-location__details {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 1.25rem;
+	padding: 1.25rem 0.5rem 0.5rem;
+}
+
+.contact-location__label {
+	margin: 0 0 0.45rem;
+	color: #aac0b1;
+}
+
+.contact-location__value {
+	margin: 0;
+	font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+.contact-location__email {
+	max-width: 60%;
+	overflow-wrap: anywhere;
+	color: #fff;
+	font-family: "DM Mono", "Courier New", monospace;
+	font-size: 0.75rem;
+	text-align: right;
+	text-decoration-color: #aac0b1;
+	text-underline-offset: 0.3rem;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+	padding-block: 0.5rem;
+}
+
+.contact-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+	color: #263b2f;
+	font-family: "DM Mono", "Courier New", monospace;
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid #aebbb0;
+	border-radius: 0;
+	padding: 0.4rem 0 0.8rem;
+	background: transparent;
+	color: #17211c;
+	font-family: "DM Sans", "Trebuchet MS", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: none;
+}
+
+.contact-form__field textarea {
+	min-height: 8rem;
+	resize: vertical;
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+	color: #7a887d;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+	border-color: #173b30;
+	outline: none;
+}
+
+.contact-form__field input:focus-visible,
+.contact-form__field textarea:focus-visible {
+	box-shadow: 0 1px #173b30;
+}
+
+.contact-form__footer {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.contact-form__submit {
+	display: inline-flex;
+	min-height: 3rem;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border: 0;
+	padding: 0.75rem 1.1rem;
+	background: #ed6547;
+	color: #17211c;
+	font-family: "DM Sans", "Trebuchet MS", sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 150ms, transform 150ms;
+}
+
+.contact-form__submit:hover:not(:disabled) {
+	transform: translateY(-2px);
+	background: #f17b60;
+}
+
+.contact-form__submit:focus-visible {
+	outline: 2px solid #173b30;
+	outline-offset: 3px;
+}
+
+.contact-form__submit:disabled {
+	cursor: wait;
+	opacity: 0.65;
+}
+
+.contact-form__submit span {
+	font-size: 1.2rem;
+}
+
+.contact-form__status {
+	margin: 0;
+	font-family: "DM Sans", "Trebuchet MS", sans-serif;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+
+.contact-form__status--success {
+	color: #176b48;
+}
+
+.contact-form__status--error {
+	color: #a43d2d;
+}
+
+@media (max-width: 760px) {
+	.contact-section__heading {
+		margin-bottom: 2rem;
+	}
+
+	.contact-section__content {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 2.5rem;
+	}
+
+	.contact-location {
+		min-height: 22rem;
+	}
+
+	.contact-location__map {
+		min-height: 14rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-section {
+		padding-block: 4rem;
+	}
+
+	.contact-location__details {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.contact-location__email {
+		max-width: 100%;
+		text-align: left;
+	}
+
+	.contact-form__footer {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
