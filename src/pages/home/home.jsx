@@ -6,10 +6,10 @@ import Projects from "./projects/projects.jsx";
 import ContactMe from "./contactMe/contactMe.jsx";
 import "./home.css";
 
-export default function Home({ isIndexOpen, onIndexClose }) {
+export default function Home() {
     return (
         <main>
-            <PageIndex isOpen={isIndexOpen} onClose={onIndexClose} />
+            <PageIndex />
             <AboutMe />
             <div className="home-overview" id="skills-stats">
                 <Skills />

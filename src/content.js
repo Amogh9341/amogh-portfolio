@@ -10,6 +10,14 @@ export const links = [
   { label: "Blogs", href: "#blogs", icon: PenIcon },
 ];
 
+export const sectionLinks = [
+  { label: "About me", href: "#about-me" },
+  { label: "Skills", href: "#skills" },
+  { label: "Stats", href: "#stats" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact me", href: "#contact" },
+];
+
 export const title = "SDE/Robotics/ML"
 
 export const name = "MyName"

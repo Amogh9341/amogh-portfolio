@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { sectionLinks } from "../../../content.js";
 import "./index.css";
 
-export default function PageIndex({ isOpen, onClose }) {
+export default function PageIndex() {
 	const [activeSection, setActiveSection] = useState("about-me");
-	const [scrollProgress, setScrollProgress] = useState(0);
 
 	useEffect(() => {
 		const updateScrollState = () => {
@@ -26,10 +25,6 @@ export default function PageIndex({ isOpen, onClose }) {
 
 			if (currentSection) setActiveSection(currentSection.id);
 
-			const pageHeight = document.documentElement.scrollHeight;
-			setScrollProgress(pageHeight > 0
-				? ((window.scrollY + viewportCenter) / pageHeight) * 100
-				: 0);
 		};
 
 		updateScrollState();
@@ -41,15 +36,6 @@ export default function PageIndex({ isOpen, onClose }) {
 		};
 	}, []);
 
-	const scrollToProgress = (event) => {
-		const viewportCenter = window.innerHeight / 2;
-		const pageHeight = document.documentElement.scrollHeight;
-		const scrollableHeight = pageHeight - window.innerHeight;
-		const focusedPoint = (Number(event.target.value) / 100) * pageHeight;
-		const top = Math.min(Math.max(focusedPoint - viewportCenter, 0), scrollableHeight);
-		window.scrollTo({ top, behavior: "instant" });
-	};
-
 	const focusSection = (event, href) => {
 		event.preventDefault();
 		document.querySelector(href)?.scrollIntoView({
@@ -57,15 +43,10 @@ export default function PageIndex({ isOpen, onClose }) {
 			block: "center",
 		});
 		window.history.replaceState(null, "", href);
-		onClose();
 	};
 
 	return (
-		<aside
-			className={`page-index${isOpen ? " page-index--open" : ""}`}
-			id="site-index-panel"
-			aria-label="Page index"
-		>
+		<aside className="page-index" aria-label="Page index">
 			<nav className="page-index__nav" aria-label="Page sections">
 				<ul className="page-index__list">
 					{sectionLinks.map(({ label, href }) => (
@@ -82,17 +63,6 @@ export default function PageIndex({ isOpen, onClose }) {
 					))}
 				</ul>
 			</nav>
-			<input
-				className="page-index__scrollbar"
-				type="range"
-				min="0"
-				max="100"
-				step="0.1"
-				value={scrollProgress}
-				onChange={scrollToProgress}
-				aria-label="Scroll page"
-				aria-valuetext={`${Math.round(scrollProgress)}% down the page`}
-			/>
 		</aside>
 	);
 }

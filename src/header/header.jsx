@@ -1,30 +1,14 @@
 import { siteName, links } from "../content.js"
 import "./header.css"
 
-export default function Header({ activeTab, onTabChange, showIndexToggle, isIndexOpen, onIndexToggle, onIndexClose }) {
+export default function Header({ activeTab, onTabChange }) {
     return (
         <header className="site-header">
             <div className="site-header__inner">
                 <div className="site-header__identity">
-                    <a className="site-header__logo" href="#about-me" onClick={onIndexClose}>
+                    <a className="site-header__logo" href="#about-me">
                         {siteName}
                     </a>
-                    {showIndexToggle && (
-                        <button
-                            aria-controls="site-index-panel"
-                            aria-expanded={isIndexOpen}
-                            aria-label={isIndexOpen ? "Close page index" : "Open page index"}
-                            className="site-header__menu-toggle"
-                            onClick={onIndexToggle}
-                            type="button"
-                        >
-                            <span className="site-header__menu-icon" aria-hidden="true">
-                                <span />
-                                <span />
-                                <span />
-                            </span>
-                        </button>
-                    )}
                 </div>
                 <nav className="site-header__nav" aria-label="Main navigation">
                     {links.map(({ label, icon: Icon }) => (
@@ -40,6 +24,20 @@ export default function Header({ activeTab, onTabChange, showIndexToggle, isInde
                         </button>
                     ))}
                 </nav>
+                <a
+                    className="site-header__contact"
+                    href="#contact"
+                    onClick={(event) => {
+                        event.preventDefault()
+                        document.querySelector("#contact")?.scrollIntoView({
+                            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+                            block: "center",
+                        })
+                        window.history.replaceState(null, "", "#contact")
+                    }}
+                >
+                    Contact me
+                </a>
             </div>
         </header>
     )
