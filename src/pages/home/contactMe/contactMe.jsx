@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { contact } from "../../../content.js";
 import "./contactMe.css";
 
+const { formLabels, formPlaceholders, formButtonText, mapsButtonText } = contact;
+
 const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -55,20 +57,27 @@ export default function ContactMe() {
 		<section className="contact-section" id="contact" aria-labelledby="contact-title">
 			<div className="contact-section__inner">
 				<div className="contact-section__heading">
-					<p className="contact-section__eyebrow">Contact</p>
-					<h2 id="contact-title">Let&apos;s make<br />something matter.</h2>
+					{/* <p className="contact-section__eyebrow"></p> */}
+					<h2 id="contact-title">Contact</h2>
 				</div>
 
 				<div className="contact-section__content">
 					<aside className="contact-location" aria-label="Location and alternate email address">
-						<div className="contact-location__map" aria-hidden="true">
-							<span className="contact-location__marker" />
-							<span className="contact-location__map-label">CURRENT LOCATION</span>
+						<div className="contact-location__map">
+							<a
+								className="contact-location__maps-link"
+								href={contact.location}
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								{mapsButtonText}
+							</a>
+							<p className="contact-location__map-text">Based in {contact.locationLabel}</p>
 						</div>
 						<div className="contact-location__details">
 							<div>
-								<p className="contact-location__label">Based in</p>
-								<p className="contact-location__value">{contact.location}</p>
+								<p className="contact-location__label">Location</p>
+								<p className="contact-location__value">{contact.locationLabel}</p>
 							</div>
 							<a className="contact-location__email" href={`mailto:${contact.alterMail}`}>
 								{contact.alterMail}
@@ -78,24 +87,24 @@ export default function ContactMe() {
 
 					<form className="contact-form" onSubmit={handleSubmit}>
 						<label className="contact-form__field">
-							<span>Subject</span>
+							<span>{formLabels.subject}</span>
 							<input
 								autoComplete="off"
 								name="subject"
 								onChange={handleChange}
-								placeholder="What would you like to discuss?"
+								placeholder={formPlaceholders.subject}
 								required
 								value={form.subject}
 							/>
 						</label>
 
 						<label className="contact-form__field">
-							<span>Mail ID</span>
+							<span>{formLabels.email}</span>
 							<input
 								autoComplete="email"
 								name="mailId"
 								onChange={handleChange}
-								placeholder="you@example.com"
+								placeholder={formPlaceholders.email}
 								required
 								type="email"
 								value={form.mailId}
@@ -103,11 +112,11 @@ export default function ContactMe() {
 						</label>
 
 						<label className="contact-form__field">
-							<span>Body</span>
+							<span>{formLabels.body}</span>
 							<textarea
 								name="body"
 								onChange={handleChange}
-								placeholder="Write your message..."
+								placeholder={formPlaceholders.body}
 								required
 								rows={5}
 								value={form.body}
@@ -116,7 +125,7 @@ export default function ContactMe() {
 
 						<div className="contact-form__footer">
 							<button className="contact-form__submit" disabled={isSending} type="submit">
-								{isSending ? "Sending..." : "Send message"}
+								{isSending ? "Sending..." : formButtonText}
 								<span aria-hidden="true">↗</span>
 							</button>
 							{status.message && (
