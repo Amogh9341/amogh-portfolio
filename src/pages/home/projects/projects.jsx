@@ -12,7 +12,6 @@ export default function Projects() {
 				<h2 className="projects-section__title" id="projects-title">Projects</h2>
 				<div className="projects-grid" id="projects-grid">
 					{projects.slice(0, visibleProjectCount).map((project) => {
-						const hasPhoto = project.photo && project.photo.toLowerCase() !== "photo";
 
 						return (
 							<a
@@ -23,7 +22,7 @@ export default function Projects() {
 								target="_blank"
 							>
 								<div className="project-card__photo">
-									{hasPhoto ? <img src={project.photo} alt={`${project.name} project`} /> : <span>Photo</span>}
+									<img src={project.photo} alt={`${project.name}`} />
 									<span className="project-card__date">{project.date}</span>
 								</div>
 								<div className="project-card__details">
