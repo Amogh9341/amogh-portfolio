@@ -126,7 +126,7 @@ export default function ContactMe() {
 						<div className="contact-form__footer">
 							<button className="contact-form__submit" disabled={isSending} type="submit">
 								{isSending ? "Sending..." : formButtonText}
-								<span aria-hidden="true">↗</span>
+								<span aria-hidden="true"></span>
 							</button>
 							{status.message && (
 								<p className={`contact-form__status contact-form__status--${status.type}`} role="status">
