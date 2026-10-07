@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { sectionLinks } from "../../../content.js";
+import { indexLinks } from "../../../content.js";
 import "./index.css";
 
 export default function PageIndex() {
@@ -8,7 +8,7 @@ export default function PageIndex() {
 	useEffect(() => {
 		const updateScrollState = () => {
 			const viewportCenter = window.innerHeight / 2;
-			const currentSection = sectionLinks
+			const currentSection = indexLinks
 				.map(({ href }) => document.querySelector(href))
 				.filter(Boolean)
 				.reduce((closest, section) => {
@@ -49,7 +49,7 @@ export default function PageIndex() {
 		<aside className="page-index" aria-label="Page index">
 			<nav className="page-index__nav" aria-label="Page sections">
 				<ul className="page-index__list">
-					{sectionLinks.map(({ label, href }) => (
+					{indexLinks.map(({ label, href }) => (
 						<li key={href}>
 							<a
 								className={activeSection === href.slice(1) ? "page-index__link page-index__link--active" : "page-index__link"}

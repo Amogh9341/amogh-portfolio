@@ -10,7 +10,7 @@ export const links = [
   { label: "Blogs", href: "#blogs", icon: PenIcon },
 ];
 
-export const sectionLinks = [
+export const indexLinks = [
   { label: "About me", href: "#about-me" },
   { label: "Skills", href: "#skills" },
   { label: "Stats", href: "#stats" },

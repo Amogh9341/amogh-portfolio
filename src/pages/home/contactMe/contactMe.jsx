@@ -57,7 +57,6 @@ export default function ContactMe() {
 		<section className="contact-section" id="contact" aria-labelledby="contact-title">
 			<div className="contact-section__inner">
 				<div className="contact-section__heading">
-					{/* <p className="contact-section__eyebrow"></p> */}
 					<h2 id="contact-title">Contact</h2>
 				</div>
 
