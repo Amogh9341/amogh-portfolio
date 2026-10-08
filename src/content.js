@@ -35,12 +35,16 @@ export const linkedIn = {
 export const skills = [
   {name: "AI/ML", description: "Python, NumPy, PyTorch", skillLevel:"20%"},
   {name:"OS", description:"Windows, WSL, Linux", skillLevel:"20%"},
-  {name:"Embedded", description:"Fusion 360, LTSpice, PX4, NumPy, Drones, ROS2", skillLevel:"20%"},
+  {name:"Embedded", description:"Fusion 360, LTSpice, PX4, NumPy, Drones, ROS2, Gazebo, MAVSDK-Python", skillLevel:"20%"},
   {name:"Dev", description:"Git, GitHub, React.js, Node.js, TailwindCSS", skillLevel:"20%"}
 ]
 
 export const stats = [
-  {name: "name", description: "description"}
+  {name: "Codeforces", description: "amogh2048, Specialist Status, 1490 rated"},
+  {name:"CodeChef", description: "amogh2048, 1609 rated"},
+  {name:"LAM Reasearch Challenge 2025", description:"Top 24 finalists nationally were invited to Bangalore for finals"},
+  {name:"IOQM Merit Certificate", description:"Know for mathemtical rigour and proving, 2024"},
+  {name:"NIDAR Finalists", description:"Invited for finals at Delhi for drone innovation challenges"}
 ]
 
 export const projects = [

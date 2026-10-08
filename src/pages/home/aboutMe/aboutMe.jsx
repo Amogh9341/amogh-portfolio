@@ -24,7 +24,7 @@ export default function AboutMe() {
               <a href={mapsSearchUrl("Indian Institute of Technology Guwahati")} target="_blank" rel="noreferrer">
                 <strong>IIT Guwahati</strong>
               </a>{" "}
-              form ECE department.
+              form ECE department, and doing a minor in Data Science and Artificial Intelligence.
             </p>
             <p className="about-me__intro">
               From <a href={mapsSearchUrl(cities[0])} target="_blank" rel="noreferrer"><strong>{cities[0]}</strong></a> lived in{" "}
