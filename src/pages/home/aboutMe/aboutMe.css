@@ -52,10 +52,42 @@
 .about-me__intro {
   max-width: 42rem;
   margin: 0;
-  color: #555;
+  color: #777;
   font-family: "DM Sans", "Trebuchet MS", sans-serif;
   font-size: clamp(1rem, 1.7vw, 1.25rem);
   line-height: 1.8;
+}
+
+.about-me__intro strong {
+  color: #222;
+}
+
+.about-me__intro + .about-me__intro {
+  margin-top: 1.25rem;
+}
+
+.about-me__intro a {
+  display: inline-block;
+  color: inherit;
+  transition: transform 160ms ease;
+}
+
+.about-me a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.about-me__intro a:hover,
+.about-me__intro a:focus-visible {
+  transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-me__intro a {
+    transition: none;
+  }
 }
 
 .about-me__links {
@@ -68,7 +100,6 @@
 }
 
 .about-me__links span {
-  border-bottom: 1px solid #111;
   padding-bottom: 0.2rem;
 }
 
