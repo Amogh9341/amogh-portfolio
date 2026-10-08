@@ -20,7 +20,7 @@ export const indexLinks = [
 
 export const title = "SDE/Robotics/ML"
 
-export const name = "Amogh Kahalekar"
+export const name = "Amogh Anand Kahalekar"
 
 export const gitHub = {
   id: "Amogh9341",
@@ -33,10 +33,10 @@ export const linkedIn = {
 }
 
 export const skills = [
-  {name: "AI/ML", description: "Python, NumPy, PyTorch", skillLevel:"20%"},
-  {name:"OS", description:"Windows, WSL, Linux", skillLevel:"20%"},
-  {name:"Embedded", description:"Fusion 360, LTSpice, PX4, NumPy, Drones, ROS2, Gazebo, MAVSDK-Python", skillLevel:"20%"},
-  {name:"Dev", description:"Git, GitHub, React.js, Node.js, TailwindCSS", skillLevel:"20%"}
+  {name: "AI/ML", description: "Python, NumPy, PyTorch", skillLevel:"80%"},
+  {name:"OS", description:"Windows, WSL, Linux", skillLevel:"70%"},
+  {name:"Embedded", description:"Fusion 360, LTSpice, PX4, NumPy, Drones, ROS2, Gazebo, MAVSDK-Python", skillLevel:"85%"},
+  {name:"Dev", description:"Git, GitHub, React.js, Node.js, TailwindCSS", skillLevel:"60%"}
 ]
 
 export const stats = [
