@@ -47,8 +47,8 @@ export const stats = [
   {name: "Codeforces", description: "amogh2048, Specialist Status, 1490 rated"},
   {name:"CodeChef", description: "amogh2048, 1609 rated"},
   {name:"LAM Reasearch Challenge 2025", description:"Top 24 finalists nationally were invited to Bangalore for finals"},
-  {name:"IOQM Merit Certificate", description:"Know for mathemtical rigour and proving, 2024"},
-  {name:"NIDAR Finalists", description:"Invited for finals at Delhi for drone innovation challenges"}
+  {name:"IOQM Merit Certificate", description:"Know for mathemtical rigour and proving, 2023"},
+  {name:"NIDAR Finalists", description:"Invited for finals at Delhi for drone innovation challenges, 2025"}
 ]
 
 export const projects = [
