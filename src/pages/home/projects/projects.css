@@ -114,10 +114,10 @@
 }
 
 .project-card__details {
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
 	min-height: 9.5rem;
 	align-items: flex-start;
-	justify-content: space-between;
 	gap: 1rem;
 	padding: 0.75rem 1rem 1rem;
 	background: #fff;
@@ -146,14 +146,13 @@
 }
 
 .project-card__description {
+	grid-column: 1 / -1;
 	margin-top: 1rem;
 	padding-left: 0.2rem;
 	line-height: 1.5;
 }
 
 .project-card__domains {
-	flex: 0 0 auto;
-	max-width: 38%;
 	text-align: right;
 }
 
@@ -175,7 +174,6 @@
 	}
 
 	.project-card__domains {
-		max-width: 35%;
 		font-size: 0.8rem;
 	}
 }

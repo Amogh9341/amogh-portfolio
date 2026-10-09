@@ -29,9 +29,9 @@ export default function Projects() {
 									<div className="project-card__copy">
 										<h3>{project.name}</h3>
 										<p className="project-card__event">{project.event}</p>
-										<p className="project-card__description">{project.description}</p>
 									</div>
 									<p className="project-card__domains">{project.domain}</p>
+									<p className="project-card__description">{project.description}</p>
 								</div>
 							</a>
 						);
