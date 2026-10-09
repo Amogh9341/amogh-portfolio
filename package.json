@@ -1,6 +1,6 @@
 {
   "name": "portfolio-frontend",
-  "homepage": "https://Amogh9341.github.io/amogh-portfolio",
+  "homepage": "https://github.com/Amogh9341/amogh-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,6 @@
   "dependencies": {
     "@emailjs/browser": "^5.0.2",
     "@tailwindcss/vite": "^4.3.3",
-    "gh-pages": "^6.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"

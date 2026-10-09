@@ -5,7 +5,7 @@ import svgr from "vite-plugin-svgr"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:"/amogh-portfolio",
+  base: "/amogh-portfolio/",
   plugins: [
     tailwindcss(),
     react(),
